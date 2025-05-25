@@ -61,7 +61,7 @@ router.push('/voice-interview')
         borderRadius: 8,
       }}
     >
-      <h2>Upload a File</h2>
+      <h2>Upload Resume</h2>
       <form onSubmit={handleUpload}>
         <Input
           type="file"
