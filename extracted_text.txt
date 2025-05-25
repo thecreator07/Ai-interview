@@ -1,0 +1,82 @@
+
+
+Aman Kumar Prasad
++91 7762911512|amankp217@gmail.com|LinkedIn|©GitHub
+Education
+Hemvati Nandan Bahuguna Garhwal University6.5 CGPA
+B.Tech :Information TechnologyAug. 2021 – May 2025
+Rajendra College, Chhapra
+Class XII inPCMAug. 2019
+Experience
+Smart India HackathonApr.  2022 - Aug.  2022
+IIT Dhanbad, Dhanbad
+•
+DevelopedKarmik, aMERN stackweb application for the Government of India to trace migrant and unorganized laborers.
+Supported10,000+worker registrations and efficiently handled concurrent users nationwide.
+•
+Led front-end development usingReact,JavaScript, andReact-Redux, creating aresponsive UIand improving overall user
+experience.  Implemented reusable components and optimized rendering to enhance application efficiency.
+•
+Optimized API interactions to improve data retrieval speed by implementingcaching strategiesand reducing redundant requests.
+•
+Developed features allowing workers to register, track applications, and access500+government-provided internship and skill
+programs.  Ensured seamless navigation accessibility and worked towards improving user engagement.
+•
+Collaborated in a team of6 developersover4 months, contributing to front-end and API integration.  Maintained code quality,
+conducted testing, and ensured timely project delivery.
+Projects
+Viber|JavaScript, Express.js, Reactjs, MongoDB, Node.js, Cloudinary, PostmanJuly.  2023
+•
+Developed a social media platform with features for video uploads, tweets, images, likes/dislikes, subscriptions, and comments.
+Ensured smooth user interactions and optimized content delivery for an engaging experience.
+•
+Implemented secureuser authentication and authorizationto enhance privacy and content security.  Used industry best
+practices like JWT and bcrypt to prevent unauthorized access.
+•
+UtilizedCloudinaryfor scalable media storage, reducing media load time and ensuring seamless multimedia experiences.
+•
+Built anadmin dashboardfor managing content and user activity, enabling real-time monitoring.  Integrated moderation tools to
+filter inappropriate content and ensure a safe user environment.
+•
+Developed ascalable architecturecapable of handling high concurrency with minimal latency.DesignedRESTful APIsand
+rigorously tested them usingPostman, achieving99.0%uptime reliability.
+TubeCore|Node.js, Express.js, MongoDB, JavaScriptJan 2024
+•
+Built afull-stackvideo platform withNode.js,Express.js, andMongoDB, designed for secure video uploads and real-time
+interactions.
+•
+Implemented features such as videouploading, commenting, liking, updating, and real-time notifications.
+•
+Appliedmulti-factor authenticationanddata encryptionfor enhanced security, ensuringdata integrityandconfidentiality.
+•
+Optimized backend performance through efficientasymptotic analysisof algorithms andRESTful APIdesign, improving system
+scalability and reducing latency.
+Analytics Dashboard|MongoDB, Express.js, Node.js, JavaScriptAug 2024
+•
+Developed anAnalytics Dashboardto visualize complex data usingSpark Line Graphs,Bar Graphs,Pie Charts, and
+Donut Chartsfor statistical data analysis.
+•
+ImplementedCRUD operationswithMongoDB,Express.js, andNode.jsto handle large-scale data management and ensure
+data consistencyandintegrity.
+•
+Appliedasymptotic analysisto optimize database queries for performance, reducing time complexity of data retrieval byO(n).
+•
+Ensured efficient backend architecture capable of processing and visualizing over1 million data points, enhancing dashboard
+responsiveness and real-time data visualization.
+•
+Utilizedstatistical algorithmsfor data aggregation, includingmean,median, andstandard deviationcalculations, for
+improved data insights.
+Technical Skills
+Languages:C/C++, SQL, JavaScript, Typescript, Python*
+Technologies/Frameworks:Nextjs, Node.js, Express.js, jQuery, Appwrite, 0Auth
+Database:MongoDB Compass/Atlas, SQL
+Developer Tools:Git, GitHub, AWS, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse, Atom
+Operating Systems:Linux, Windows
+Miscellaneous:CI/CD, Agile Methodology, Design Patterns, HLD, LLD, Problem Solving Skills
+Achievements
+•
+Solved250+ DSA problemsacross different platforms (LeetCode, GFG)
+•
+Smart India Hackathon Finalist 2022
+•
+Invited as Smart India Hackathon Mentor 2024
