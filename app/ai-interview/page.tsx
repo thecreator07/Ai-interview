@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { motion } from "motion/react";
-import { ResponseData } from "../api/ai/route";
+import { ResponseData } from "@/lib/validid";
+// import { ResponseData } from "../api/ai/route";
 export default function ChatPage() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<{ role: string; content: string }[]>(

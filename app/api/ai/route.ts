@@ -3,10 +3,12 @@ import OpenAI from "openai";
 import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
+import MessageModel from "@/models/message.models";
+import { ResponseData } from "@/lib/validid";
 
 const openai = new OpenAI({
-    apiKey: process.env.GEMINI_API_KEY,
-    baseURL: process.env.BASE_URL
+  apiKey: process.env.GEMINI_API_KEY,
+  baseURL: process.env.BASE_URL
 });
 
 const extractedTextPath = path.resolve(process.cwd(), "extracted_text.txt");
@@ -30,6 +32,7 @@ Rules:
 1. Follow the strict JSON output as per the Output schema.
 2. Always perform one step at a time and wait for the next input.
 3. Carefully analyze the user's answer before proceeding.
+4.
 
 Output Format:
 { step: "string", content: "string" }
@@ -46,18 +49,16 @@ Output:
 { step: "question", content: "Consider if the answer includes key features and benefits of Redux Toolkit." }
 
 `
-export interface ResponseData {
-  question: string;
-  rating: string;
-  guideline: string;
-}
 
 const finalResponsedata: ResponseData[] = [];
 
 let previousQuestion = ""; // Track last question
 
 export async function POST(request: NextRequest) {
+
   try {
+
+
     const { messages } = await request.json();
     const conversation = [{ role: "system", content: systemMessage }, ...messages];
 
@@ -67,6 +68,7 @@ export async function POST(request: NextRequest) {
 
     let retries = 5;
 
+    console.log("user message", messages)
     while (retries--) {
       const response = await openai.chat.completions.create({
         model: "gemini-2.0-flash",
@@ -78,7 +80,7 @@ export async function POST(request: NextRequest) {
       const message = response.choices[0].message;
       if (!message.content) break;
 
-      console.log("Model message:", message);
+      // console.log("Model message:", message);
       conversation.push({ role: "assistant", content: message.content });
 
       // Step matchers
@@ -103,23 +105,29 @@ export async function POST(request: NextRequest) {
       if (questionMatch) {
         currentQuestion = questionMatch[1].replace(/\\"/g, '"');
 
-       
+
         if (previousQuestion && currentRating && currentGuideline) {
           finalResponsedata.push({
-            question: previousQuestion,
+            question: messages ? messages[messages.length - 2].content : "",
             rating: currentRating,
             guideline: currentGuideline,
+            answer: messages ? messages[messages.length - 1].content : ""
+            // filter(() => {
+            //   // Get the last user message content
+            //   const userMessages = messages?.filter((msg: { role: string, content: string }) => msg.role === 'user');
+            //   return userMessages?.length ? userMessages[userMessages.length - 1].content : "";
+            // })
           });
 
-          
+          console.log(finalResponsedata)
           currentRating = "";
           currentGuideline = "";
         }
 
-       
+
         previousQuestion = currentQuestion;
 
-        break; 
+        break;
       }
 
       // Simulate user acknowledgement to continue flow

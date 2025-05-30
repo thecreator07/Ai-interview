@@ -28,6 +28,15 @@ export default function InterviewAssistant() {
     SpeechRecognition.stopListening();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "en-US";
+    utterance.rate = 1;
+    utterance.pitch = 1;
+  
+    // utterance.onend=()=>{
+    //   if (utterance.volume) {
+
+    //   }
+    // }
+
     speechSynthesis.speak(utterance);
   };
 
